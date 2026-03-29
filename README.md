@@ -118,13 +118,35 @@ chmod +x *.sh
 ```bash
 ./script1.sh
 ```
+C:\Users\kstbh\OneDrive\Desktop\script1.sh: line 13: uptime: command not found
+==========================================
+          Open Source Audit
+==========================================
+Student Name    : Kaustubh Upadhyay
+Chosen Software : Git
+------------------------------------------
+OS Distribution : Linux Distribution
+Kernel Version  : 3.6.6-1cdd4371.x86_64
+Current User    : kstbh
+Home Directory  : /c/Users/kstbh
+System Uptime   :
+Current Date    : Sunday, 29 March 2026
+------------------------------------------
+License Note: This system and Git are both
+covered under the GNU GPL v2 license.
+==========================================
 
 ### Script 2
 
 ```bash
 ./script2.sh
 ```
-
+Checking for package: git...
+C:\Users\kstbh\OneDrive\Desktop\script2.sh: line 8: dpkg: command not found
+ERROR: git is NOT installed.
+Please run: sudo apt install git
+------------------------------------------
+Git: The version control tool Linus built when proprietary failed him.
 > git is NOT installed: `sudo apt install git`
 
 ### Script 3
@@ -132,33 +154,50 @@ chmod +x *.sh
 ```bash
 ./script3.sh
 ```
-Directory Audit Report
-----------------------
-/etc => Permissions: drwxr-xr-x kstbh 197609 | Size: 1.6M
-/var/log does not exist on this system
-/home does not exist on this system
-/usr/bin => Permissions: drwxr-xr-x kstbh 197609 | Size: 91M
-/tmp => Permissions: drwxr-xr-x kstbh 197609 | Size: 855M
+Starting Directory Audit...
+------------------------------------------
+Directory: /etc
+  - Permissions/Owner: drwxr-xr-x kstbh 197609
+  - Total Size: 1.6M
+Warning: /var/log does not exist.
+Directory: /usr/bin
+  - Permissions/Owner: drwxr-xr-x kstbh 197609
+  - Total Size: 91M
+Directory: /tmp
+  - Permissions/Owner: drwxr-xr-x kstbh 197609
+  - Total Size: 866M
+------------------------------------------
+Checking Git Configuration Audit...
+Git Global Config Found at /c/Users/kstbh/.gitconfig
+Permissions: -rw-r--r-- | Owner: kstbh
+
 ### Script 4
-
 ```bash
-zer.sh /var/log/syslog error
+./script4.sh
 ```
+$ bash "C:\Users\kstbh\OneDrive\Desktop\script4.sh"
+Error: File  not found.
 
-> Needs `sudo` to read system logs. For the MySQL error log specifically:
-> ```bash
-> sudo ./script4_log_analyzer.sh /var/log/mysql/error.log error
-> ```
-> If the log doesn't exist yet, generate a test file:
-> ```bash
-> sudo journalctl > /tmp/test.log && ./script4_log_analyzer.sh /tmp/test.log error
-> ```
 
 ### Script 5
 
 ```bash
 ./script5.sh
 ```
+=== Personalized Open Source Manifesto ===
+1. Name one Git feature you use (e.g., branch, commit): commit
+2. In one word, what does 'freedom' mean to you? Open
+3. What would you share with the world for free? Open-source IDE
+------------------------------------------
+Manifesto saved to manifesto_kstbh.txt
+------------------------------------------
+OPEN SOURCE MANIFESTO
+Created by kstbh on 29 March 2026
+------------------------------------------
+I believe that software should be as open as a 'commit'.
+To me, freedom in code is defined by 'Open'.
+In the spirit of Git, I commit to building 'Open-source IDE'
+and sharing it freely with the global community.
 
 ---
 
@@ -170,13 +209,10 @@ zer.sh /var/log/syslog error
 | `lsb_release not found` | `sudo apt install lsb-release` |
 | `mysql: command not found` in Script 2 | `sudo apt install mysql-server` |
 | Script 4 log file not found | Use `sudo` or generate a test log with `journalctl` |
-| MySQL paths show "Not found" in Script 3 | MySQL may not be installed yet |
-
 ---
 
 ## References
 
-- MySQL Reference Manual: https://dev.mysql.com/doc/refman/8.0/en/
 - MariaDB Foundation: https://mariadb.org/about/
 - GNU GPL v2: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 - GNU Free Software Definition: https://www.gnu.org/philosophy/free-sw.html

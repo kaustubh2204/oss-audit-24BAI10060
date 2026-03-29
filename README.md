@@ -118,6 +118,8 @@ chmod +x *.sh
 ```bash
 ./script1.sh
 ```
+Output
+```
 C:\Users\kstbh\OneDrive\Desktop\script1.sh: line 13: uptime: command not found
 ==========================================
           Open Source Audit
@@ -136,23 +138,27 @@ License Note: This system and Git are both
 covered under the GNU GPL v2 license.
 ==========================================
 
-### Script 2
+```
 
+### Script 2
 ```bash
 ./script2.sh
 ```
-Checking for package: git...
+Output
+```Checking for package: git...
 C:\Users\kstbh\OneDrive\Desktop\script2.sh: line 8: dpkg: command not found
 ERROR: git is NOT installed.
 Please run: sudo apt install git
 ------------------------------------------
 Git: The version control tool Linus built when proprietary failed him.
-> git is NOT installed: `sudo apt install git`
-
+> git is NOT installed: `sudo apt install git
+```
 ### Script 3
 
 ```bash
 ./script3.sh
+```
+Output
 ```
 Starting Directory Audit...
 ------------------------------------------
@@ -170,19 +176,22 @@ Directory: /tmp
 Checking Git Configuration Audit...
 Git Global Config Found at /c/Users/kstbh/.gitconfig
 Permissions: -rw-r--r-- | Owner: kstbh
-
+```
 ### Script 4
 ```bash
 ./script4.sh
 ```
-$ bash "C:\Users\kstbh\OneDrive\Desktop\script4.sh"
+Output
+```$ bash "C:\Users\kstbh\OneDrive\Desktop\script4.sh"
 Error: File  not found.
-
+```
 
 ### Script 5
 
 ```bash
 ./script5.sh
+```
+Output
 ```
 === Personalized Open Source Manifesto ===
 1. Name one Git feature you use (e.g., branch, commit): commit
@@ -199,6 +208,7 @@ To me, freedom in code is defined by 'Open'.
 In the spirit of Git, I commit to building 'Open-source IDE'
 and sharing it freely with the global community.
 
+```
 ---
 
 ## Troubleshooting
